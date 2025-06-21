@@ -8,11 +8,11 @@
   --bright-blue: #3A7BFD;
   --check-background: linear-gradient(135deg, #57DDFF, #C058F3);
   --bg-light-mode: #FAFAFA;
-  --very-Light-grayish-blue: #E4E5F1;
-  --light-Grayish-blue: #DDd3DB;
+  --very-light-grayish-blue: #E4E5F1;
+  --light-grayish-blue: #DDd3DB;
   --dark-grayish-blue: #9394A5;
   --very-dark-grayish-blue: #484B6A;
-
+  /* dark mode */
   --very-dark-blue: #161722;
   --very-dark-desaturated-blue: #25273C;
   --light-grayish-blue: #CACDE8;
@@ -28,9 +28,30 @@
 body {
   font: var(--text-md);
   background-color:var(--bg-light-mode);
+  color: var(--bg-light-mode);
 }
 
-.container {
-  max-width: 90rem;
-  margin-inline: auto;
+.bg-image {
+  height: 20.25rem;
+  background-image: url(../assets/images/bg-desktop-light.jpg);
+  background-size: cover;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    letter-spacing: 1rem;
+    font-size: 2.75rem;
+  }
+}
+
+#app {
+  width: 36rem;
+  padding: .0625rem;
+  margin: 5.5rem auto 3rem;
 }
