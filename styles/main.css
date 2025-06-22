@@ -1,0 +1,44 @@
+.new-todo {
+  margin-block: 3.25rem 1.5rem;
+  border-radius: .375rem;
+}
+
+.todo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.625rem;
+  width: 100%;
+  background-color: var(--todo-bg-color);
+  padding: 1.3125rem 1.625rem;
+
+  span {
+    color: var(--very-dark-grayish-blue);
+    font-size: 1.3125rem;
+  }
+  
+  & + .todo-wrapper {
+    border-top: .125rem solid var(--todo-border-color);
+  }
+
+  input[type="radio"] {
+    width: 1.6875rem;
+    height: 1.6875rem;
+  }
+
+  input[type="text"] {
+    all: unset;
+    margin-top: .125rem;
+    width: 100%;
+    color: var(--very-dark-grayish-blue);
+
+    &::placeholder {
+      color: var(--dark-grayish-blue);
+    }
+  }
+}
+
+.todo-list {
+  /* margin: 5rem; */
+  border-radius: .375rem;
+  overflow: hidden;
+}

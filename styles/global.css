@@ -5,10 +5,11 @@
 }
 
 :root {
-  --bright-blue: #3A7BFD;
+  --link: #3A7BFD;
   --check-background: linear-gradient(135deg, #57DDFF, #C058F3);
-  --bg-light-mode: #FAFAFA;
-  --very-light-grayish-blue: #E4E5F1;
+  --bg-color: #FAFAFA;
+  --todo-bg-color: #FFFFFF;
+  --todo-border-color: #E4E5F1;
   --light-grayish-blue: #DDd3DB;
   --dark-grayish-blue: #9394A5;
   --very-dark-grayish-blue: #484B6A;
@@ -27,8 +28,8 @@
 
 body {
   font: var(--text-md);
-  background-color:var(--bg-light-mode);
-  color: var(--bg-light-mode);
+  background-color:var(--bg-color);
+  color: var(--bg-color);
 }
 
 .bg-image {
