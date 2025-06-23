@@ -4,7 +4,12 @@
   box-sizing: border-box;
 }
 
-:root {
+.dark-mode:root {
+  --bg-color: #161722;
+  --todo-bg-color: #25273C;
+}
+
+html:root {
   --link: #3A7BFD;
   --check-background: linear-gradient(135deg, #57DDFF, #C058F3);
   --bg-color: #FAFAFA;
@@ -14,13 +19,10 @@
   --dark-grayish-blue: #9394A5;
   --very-dark-grayish-blue: #484B6A;
   /* dark mode */
-  --very-dark-blue: #161722;
-  --very-dark-desaturated-blue: #25273C;
-  --light-grayish-blue: #CACDE8;
-  --light-grayish-blue-hover: #E4E5F1;
+  /* --light-grayish-blue-hover: #E4E5F1;
   --dark-grayish-blue: #777A92;
   --very-dark-grayish-blue: #4D5066;
-  --very-dark-grayish-blue: #393A4C;
+  --very-dark-grayish-blue: #393A4C; */
 
   --font-family: "Josefin Sans", sans-serif;
   --text-md: 400 1.125rem/140% var(--font-family);
@@ -44,7 +46,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-
+  
   h1 {
     letter-spacing: 1rem;
     font-size: 2.75rem;

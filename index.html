@@ -18,7 +18,7 @@
     <div id="app">
       <header>
         <h1>TODO</h1>
-        <img src="assets/icons/icon-moon.svg">
+        <img src="assets/icons/icon-moon.svg" id="changeMode">
       </header>
       <main>
         <div class="todo-wrapper new-todo">
@@ -43,3 +43,12 @@
     </footer>
   </body>
 </html>
+<!-- teste de modo escuro -->
+<script>
+  var x = document.querySelector("#changeMode");
+  x.addEventListener("click", () => {
+    document.getElementsByTagName("html")[0].classList.add("dark-mode");
+    document.querySelector(".bg-image").style.backgroundImage = "url(assets/images/bg-desktop-dark.jpg)";
+    x.src = "assets/icons/icon-sun.svg";
+  })
+</script>
