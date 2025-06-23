@@ -7,23 +7,21 @@
 .dark-mode:root {
   --bg-color: #161722;
   --todo-bg-color: #25273C;
+  --todo-border-color: #393A4C;
+  --font-color: #CACDE848;
+  --todo-font-color: #cacde8ef;
 }
 
 html:root {
+  --delay-modes: 500ms;
   --link: #3A7BFD;
   --check-background: linear-gradient(135deg, #57DDFF, #C058F3);
   --bg-color: #FAFAFA;
   --todo-bg-color: #FFFFFF;
   --todo-border-color: #E4E5F1;
-  --light-grayish-blue: #DDd3DB;
-  --dark-grayish-blue: #9394A5;
-  --very-dark-grayish-blue: #484B6A;
-  /* dark mode */
-  /* --light-grayish-blue-hover: #E4E5F1;
-  --dark-grayish-blue: #777A92;
-  --very-dark-grayish-blue: #4D5066;
-  --very-dark-grayish-blue: #393A4C; */
-
+  --font-color: #9394a5d6;
+  --todo-font-color: #484B6A;
+  
   --font-family: "Josefin Sans", sans-serif;
   --text-md: 400 1.125rem/140% var(--font-family);
 }
@@ -31,7 +29,8 @@ html:root {
 body {
   font: var(--text-md);
   background-color:var(--bg-color);
-  color: var(--bg-color);
+  color: var(--font-color);
+  transition: var(--delay-modes);
 }
 
 .bg-image {
@@ -41,6 +40,7 @@ body {
   position: absolute;
   inset: 0;
   z-index: -1;
+  transition: var(--delay-modes);
 }
 
 header {
@@ -50,6 +50,11 @@ header {
   h1 {
     letter-spacing: 1rem;
     font-size: 2.75rem;
+    color: #FFFFFF;
+  }
+
+  img {
+    transition: var(--delay-modes);
   }
 }
 

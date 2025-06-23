@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
     <title>Todo app | Frontend Mentor</title>
-    <style>
-      
-    </style>
     <link rel="stylesheet" href="styles/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   </head>
@@ -25,13 +22,24 @@
           <input type="radio" disabled>
           <input type="text" placeholder="Create a new todo...">
         </div>
-        <div class="todo-list">
-          <div class="todo-wrapper"><input type="radio"><span>Teste</span></div>
-          <div class="todo-wrapper"><input type="radio"><span>Teste</span></div>
-          <div class="todo-wrapper"><input type="radio"><span>Teste</span></div>
-          <div class="todo-wrapper"><input type="radio"><span>Teste</span></div>
-          <div class="todo-wrapper"><input type="radio"><span>Teste</span></div>
-          <div class="todo-wrapper"><input type="radio"><span>Teste</span></div>
+        <div class="todo-app">
+          <div>
+            <div class="todo-wrapper"><input type="radio"><span style="text-decoration: line-through; opacity: .5;">Teste</span></div>
+            <div class="todo-wrapper"><input type="checkbox"><span>Teste</span></div>
+            <div class="todo-wrapper"><input type="checkbox"><span>Teste</span></div>
+            <div class="todo-wrapper"><input type="checkbox"><span>Teste</span></div>
+            <div class="todo-wrapper"><input type="checkbox"><span>Teste</span></div>
+            <div class="todo-wrapper"><input type="checkbox"><span>Teste</span></div>
+          </div>
+          <div class="features">
+            <span>5 itens left</span>
+            <div>
+              <strong>All</strong>
+              <strong>Active</strong>
+              <strong>Completed</strong>
+            </div>
+            <span>Clear Completed</span>
+          </div>
         </div>
       </main>
     </div>
@@ -45,10 +53,16 @@
 </html>
 <!-- teste de modo escuro -->
 <script>
-  var x = document.querySelector("#changeMode");
-  x.addEventListener("click", () => {
-    document.getElementsByTagName("html")[0].classList.add("dark-mode");
-    document.querySelector(".bg-image").style.backgroundImage = "url(assets/images/bg-desktop-dark.jpg)";
-    x.src = "assets/icons/icon-sun.svg";
+  document.querySelector("#changeMode").addEventListener("click", () => {
+    let html = document.getElementsByTagName("html")[0]
+    if (html.className == "") {
+      document.getElementsByTagName("html")[0].classList.add("dark-mode");
+      document.querySelector(".bg-image").style.backgroundImage = "url(assets/images/bg-desktop-dark.jpg)";
+      document.querySelector("#changeMode").src = "assets/icons/icon-sun.svg";
+    } else {
+      document.getElementsByTagName("html")[0].classList.remove("dark-mode");
+      document.querySelector(".bg-image").style.backgroundImage = "url(assets/images/bg-desktop-light.jpg)";
+      document.querySelector("#changeMode").src = "assets/icons/icon-moon.svg";
+    }
   })
 </script>

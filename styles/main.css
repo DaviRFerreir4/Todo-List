@@ -1,25 +1,23 @@
-.new-todo {
-  margin-block: 3.25rem 1.5rem;
+.todo-app {
+  background-color: var(--todo-bg-color);
   border-radius: .375rem;
+  overflow: hidden;
 }
 
 .todo-wrapper {
+  width: 100%;
+  padding: 1.3125rem 1.625rem;
+  background-color: var(--todo-bg-color);
+  border-bottom: .125rem solid var(--todo-border-color);
   display: flex;
   align-items: center;
   gap: 1.625rem;
-  width: 100%;
-  background-color: var(--todo-bg-color);
-  padding: 1.3125rem 1.625rem;
-
+  
   span {
-    color: var(--very-dark-grayish-blue);
+    color: var(--todo-font-color);
     font-size: 1.3125rem;
   }
   
-  & + .todo-wrapper {
-    border-top: .125rem solid var(--todo-border-color);
-  }
-
   input[type="radio"] {
     width: 1.6875rem;
     height: 1.6875rem;
@@ -29,15 +27,39 @@
     all: unset;
     margin-top: .125rem;
     width: 100%;
-    color: var(--very-dark-grayish-blue);
-
+    color: var(--todo-font-color);
+    
     &::placeholder {
-      color: var(--dark-grayish-blue);
+      color: var(--font-color);
     }
   }
 }
 
-.todo-list {
+.new-todo {
+  margin-block: 3.25rem 1.5rem;
   border-radius: .375rem;
-  overflow: hidden;
+  border: none;
+}
+
+.features {
+  font-size: 1rem;
+  padding: .75rem 1.625rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  
+  & > span {
+    font-size: .9375rem;
+  }
+
+  & > div {
+    justify-self: center;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  span:nth-child(3) {
+    justify-self: end;
+  }
 }
