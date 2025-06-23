@@ -40,6 +40,7 @@
   input[type="text"] {
     all: unset;
     margin-top: .125rem;
+    border-bottom: .0625rem solid transparent;
     flex-grow: 1;
     font-size: 1.3125rem;
     color: var(--todo-font-color);
@@ -49,11 +50,28 @@
       color: var(--font-color);
       transition: inherit;
     }
+
+    &:focus {
+      border-color: var(--todo-font-color);
+    }
   }
   
   input[type=checkbox]:checked + input[type=text] {
     text-decoration: line-through;
     opacity: .5;
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+  }
+
+  svg{
+    &:hover {
+      cursor: pointer;
+      fill: var(--link);
+    }
   }
 }
 

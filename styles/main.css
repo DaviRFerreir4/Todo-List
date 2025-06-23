@@ -22,14 +22,17 @@
     justify-self: center;
     display: flex;
     gap: 1rem;
-
-    strong {
-      cursor: pointer;
-    }
   }
   
   span:nth-child(3) {
     justify-self: end;
+  }
+
+  .interactable {
+    transition: 200ms;
     cursor: pointer;
+    &:hover {
+      color: var(--link);
+    }
   }
 }
