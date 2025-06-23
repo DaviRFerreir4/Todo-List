@@ -1,44 +1,9 @@
+@import url(todos.css);
+
 .todo-app {
   background-color: var(--todo-bg-color);
   border-radius: .375rem;
   overflow: hidden;
-}
-
-.todo-wrapper {
-  width: 100%;
-  padding: 1.3125rem 1.625rem;
-  background-color: var(--todo-bg-color);
-  border-bottom: .125rem solid var(--todo-border-color);
-  display: flex;
-  align-items: center;
-  gap: 1.625rem;
-  
-  span {
-    color: var(--todo-font-color);
-    font-size: 1.3125rem;
-  }
-  
-  input[type="radio"] {
-    width: 1.6875rem;
-    height: 1.6875rem;
-  }
-
-  input[type="text"] {
-    all: unset;
-    margin-top: .125rem;
-    width: 100%;
-    color: var(--todo-font-color);
-    
-    &::placeholder {
-      color: var(--font-color);
-    }
-  }
-}
-
-.new-todo {
-  margin-block: 3.25rem 1.5rem;
-  border-radius: .375rem;
-  border: none;
 }
 
 .features {
@@ -57,9 +22,14 @@
     justify-self: center;
     display: flex;
     gap: 1rem;
+
+    strong {
+      cursor: pointer;
+    }
   }
   
   span:nth-child(3) {
     justify-self: end;
+    cursor: pointer;
   }
 }

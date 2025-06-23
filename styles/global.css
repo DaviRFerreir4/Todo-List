@@ -2,18 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 400ms;
 }
 
 .dark-mode:root {
   --bg-color: #161722;
   --todo-bg-color: #25273C;
-  --todo-border-color: #393A4C;
+  --todo-border-color: rgb(57, 58, 76);
   --font-color: #CACDE848;
   --todo-font-color: #cacde8ef;
 }
 
 html:root {
-  --delay-modes: 500ms;
   --link: #3A7BFD;
   --check-background: linear-gradient(135deg, #57DDFF, #C058F3);
   --bg-color: #FAFAFA;
@@ -30,7 +30,6 @@ body {
   font: var(--text-md);
   background-color:var(--bg-color);
   color: var(--font-color);
-  transition: var(--delay-modes);
 }
 
 .bg-image {
@@ -40,7 +39,6 @@ body {
   position: absolute;
   inset: 0;
   z-index: -1;
-  transition: var(--delay-modes);
 }
 
 header {
@@ -51,10 +49,6 @@ header {
     letter-spacing: 1rem;
     font-size: 2.75rem;
     color: #FFFFFF;
-  }
-
-  img {
-    transition: var(--delay-modes);
   }
 }
 
