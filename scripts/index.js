@@ -34,18 +34,19 @@ addTodo.addEventListener("click", () => {
   newTodo.classList.add("todo-wrapper");
   let inputCheckbox = document.createElement("input");
   inputCheckbox.type = "checkbox";
+  inputCheckbox.addEventListener("change", checkTodos);
   let inputText = document.createElement("input");
   inputText.type = "text";
   inputText.value = document.querySelector("input[type=text]").value;
   inputText.disabled = true;
-  svgEdit = createSvgEdit();
+  let svgEdit = createSvgEdit();
   svgEdit.addEventListener("click", () => {
     editElement(inputCheckbox, inputText);
   });
   newTodo.append(inputCheckbox);
   newTodo.append(inputText);
   let div = document.createElement("div");
-  svgDelete = createSvgDelete();
+  let svgDelete = createSvgDelete();
   svgDelete.addEventListener("click", () => {
     deleteElement(newTodo);
   });
@@ -54,6 +55,7 @@ addTodo.addEventListener("click", () => {
   newTodo.append(div);
   document.querySelector("div.todo-list").prepend(newTodo);
   document.querySelector("input[type=text]").value = "";
+  checkTodos();
 });
 
 function editElement(inputCheckbox, inputText) {
@@ -73,6 +75,7 @@ function editElement(inputCheckbox, inputText) {
 
 function deleteElement(element) {
   element.remove();
+  checkTodos();
 }  
 
 function createSvgEdit() {
@@ -101,3 +104,82 @@ function createSvgDelete() {
   svgDelete.append(path);
   return svgDelete;
 }
+
+function checkTodos() {
+  let todos = document.querySelectorAll(".todo-wrapper");
+  let completed = 0;
+  todos.forEach((element, index) => {
+    let teste = document.querySelectorAll("input[type=checkbox]")[index];
+    teste.addEventListener("change", checkTodos)
+    if (teste.checked) {
+      completed++;
+    }
+  });
+  document.querySelector("span#todosRemaining").textContent = `${todos.length - 1 - completed} itens left`
+}
+
+let todos = document.querySelectorAll(".todo-wrapper");
+todos.forEach((element, index) => {
+  let teste = document.querySelectorAll("input[type=checkbox]")[index];
+  teste.addEventListener("change", checkTodos);
+});
+
+document.querySelector("strong#showAll").addEventListener("click", () => {
+  let todos = document.querySelectorAll("div.todo-wrapper");
+  todos.forEach((element, index) => {
+    if(index !== 0) {
+      element.style.display = "flex";
+    }
+  });
+});
+
+document.querySelector("strong#showActive").addEventListener("click", () => {
+  let todos = document.querySelectorAll("div.todo-wrapper");
+  todos.forEach((element, index) => {
+    element.style.display = "flex";
+    if (index !== 0) {
+      if(document.querySelectorAll("input[type=checkbox]")[index].checked) {
+        element.style.display = "none";
+      }
+    }
+  });
+});
+
+document.querySelector("strong#showCompleted").addEventListener("click", () => {
+  let todos = document.querySelectorAll("div.todo-wrapper");
+  todos.forEach((element, index) => {
+    element.style.display = "flex";
+    if (index !== 0) {
+      if(!document.querySelectorAll("input[type=checkbox]")[index].checked) {
+        element.style.display = "none";
+      }
+    }
+  });
+});
+
+document.querySelector("strong#showCompleted").addEventListener("click", () => {
+  let todos = document.querySelectorAll("div.todo-wrapper");
+  todos.forEach((element, index) => {
+    element.style.display = "flex";
+    if (index !== 0) {
+      if(!document.querySelectorAll("input[type=checkbox]")[index].checked) {
+        element.style.display = "none";
+      }
+    }
+  });
+});
+
+document.querySelector("span#clearCompleted").addEventListener("click", () => {
+  let todos = document.querySelectorAll("div.todo-wrapper");
+  let todosDel = [];
+  todos.forEach((element, index) => {
+    if (index !== 0) {
+      if(document.querySelectorAll("input[type=checkbox]")[index].checked) {
+        todosDel.push(element);
+      }
+    }
+  });
+  todosDel.forEach(element => {
+    element.remove();
+  });
+});
