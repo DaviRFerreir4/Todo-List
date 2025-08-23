@@ -2,37 +2,65 @@
 
 .todo-app {
   background-color: var(--todo-bg-color);
-  border-radius: .375rem;
+  transition: background-color 0.35s;
+  border-radius: 0.375rem;
   overflow: hidden;
+  position: relative;
 }
 
 .features {
-  font-size: 1rem;
-  padding: .75rem 1.625rem;
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(3, 1fr);
+  padding: 0.75rem 1.625rem;
+  display: flex;
   justify-content: space-between;
-  
+  font-size: 1rem;
+  transition: color 0.35s;
+
   & > span {
-    font-size: .9375rem;
+    font-size: 0.75rem;
   }
 
   & > div {
-    justify-self: center;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  span:nth-child(3) {
-    justify-self: end;
+    display: none;
   }
 
   .interactable {
-    transition: 200ms;
+    transition: color 0.35s;
     cursor: pointer;
+
     &:hover {
       color: var(--link);
     }
+  }
+}
+
+.features-mobile {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--todo-bg-color);
+  transition: background-color 0.35s, color 0.35s;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  box-shadow: 0rem -0.25rem 3rem rgba(0, 0, 0, 0.164);
+}
+
+@media (width >= 46.5em) {
+  .features {
+    & > span {
+      font-size: 0.9375rem;
+    }
+
+    div {
+      display: flex;
+      justify-self: center;
+      gap: 1rem;
+    }
+  }
+
+  .features-mobile {
+    display: none;
   }
 }

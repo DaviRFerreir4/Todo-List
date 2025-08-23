@@ -2,40 +2,41 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 400ms;
 }
 
 .dark-mode:root {
   --bg-color: #161722;
-  --todo-bg-color: #25273C;
+  --todo-bg-color: #25273c;
   --todo-border-color: rgb(57, 58, 76);
-  --font-color: #CACDE848;
+  --font-color: #cacde848;
   --todo-font-color: #cacde8ef;
 }
 
 html:root {
-  --link: #3A7BFD;
-  --check-background: linear-gradient(135deg, #57DDFF, #C058F3);
-  --bg-color: #FAFAFA;
-  --todo-bg-color: #FFFFFF;
-  --todo-border-color: #E4E5F1;
+  --link: #3a7bfd;
+  --check-background: linear-gradient(135deg, #57ddff, #c058f3);
+  --bg-color: #fafafa;
+  --todo-bg-color: #ffffff;
+  --todo-border-color: #e4e5f1;
   --font-color: #9394a5d6;
-  --todo-font-color: #484B6A;
-  
+  --todo-font-color: #484b6a;
+
   --font-family: "Josefin Sans", sans-serif;
   --text-md: 400 1.125rem/140% var(--font-family);
 }
 
 body {
   font: var(--text-md);
-  background-color:var(--bg-color);
+  background-color: var(--bg-color);
   color: var(--font-color);
+  transition: background-color 0.35s;
 }
 
 .bg-image {
-  height: 20.25rem;
-  background-image: url(../assets/images/bg-desktop-light.jpg);
-  background-size: cover;
+  transition: background-image 0.35s;
+  background-image: url("../assets/images/bg-mobile-light.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -44,16 +45,32 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  
+
   h1 {
-    letter-spacing: 1rem;
-    font-size: 2.75rem;
-    color: #FFFFFF;
+    letter-spacing: 0.75rem;
+    font-size: 1.75rem;
+    color: #ffffff;
   }
 }
 
 #app {
-  width: 36rem;
-  padding: .0625rem;
-  margin: 5.5rem auto 3rem;
+  width: 85%;
+  padding: 0.0625rem;
+  margin: 3rem auto 3rem;
+}
+
+@media (width >= 46.5em) {
+  .bg-image {
+    background-image: url("../assets/images/bg-desktop-light.jpg");
+  }
+
+  header h1 {
+    letter-spacing: 1rem;
+    font-size: 2.75rem;
+  }
+
+  #app {
+    margin: 5.5rem auto 3rem;
+    width: 36rem;
+  }
 }

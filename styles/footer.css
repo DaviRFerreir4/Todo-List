@@ -3,6 +3,7 @@
   margin-inline: auto;
   font-size: 11px;
   color: var(--font-color);
+  transition: color 0.35s;
 
   a {
     color: var(--link);

@@ -1,88 +1,225 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
     <title>Todo app | Frontend Mentor</title>
-    <link rel="stylesheet" href="styles/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="bg-image"></div>
     <div id="app">
       <header>
         <h1>TODO</h1>
-        <img src="assets/icons/icon-moon.svg" id="changeMode">
+        <img src="assets/icons/icon-moon.svg" id="changeMode" />
       </header>
       <main>
         <div class="todo-wrapper new-todo">
-          <input type="checkbox" disabled>
-          <input type="text" placeholder="Create a new todo...">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--todo-font-color)" viewBox="0 0 256 256" class="add"><path d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z"></path></svg>
+          <input type="checkbox" disabled />
+          <input type="text" placeholder="Create a new todo..." />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="var(--font-color)"
+            viewBox="0 0 256 256"
+            class="add"
+          >
+            <path
+              d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z"
+            ></path>
+          </svg>
         </div>
         <div class="todo-app">
           <div class="todo-list">
             <div class="todo-wrapper">
-              <input type="checkbox">
-              <input type="text" value="Teste1" disabled>
+              <input type="checkbox" />
+              <input type="text" value="Teste1" disabled />
               <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--todo-font-color)" viewBox="0 0 256 256" class="edit"><path d="M232.49,55.51l-32-32a12,12,0,0,0-17,0l-96,96A12,12,0,0,0,84,128v32a12,12,0,0,0,12,12h32a12,12,0,0,0,8.49-3.51l96-96A12,12,0,0,0,232.49,55.51ZM192,49l15,15L196,75,181,60Zm-69,99H108V133l56-56,15,15Zm105-7.43V208a20,20,0,0,1-20,20H48a20,20,0,0,1-20-20V48A20,20,0,0,1,48,28h67.43a12,12,0,0,1,0,24H52V204H204V140.57a12,12,0,0,1,24,0Z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--todo-font-color)" viewBox="0 0 256 256" class="delete"><path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128Z"></path></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="var(--font-color)"
+                  viewBox="0 0 256 256"
+                  class="edit"
+                >
+                  <path
+                    d="M232.49,55.51l-32-32a12,12,0,0,0-17,0l-96,96A12,12,0,0,0,84,128v32a12,12,0,0,0,12,12h32a12,12,0,0,0,8.49-3.51l96-96A12,12,0,0,0,232.49,55.51ZM192,49l15,15L196,75,181,60Zm-69,99H108V133l56-56,15,15Zm105-7.43V208a20,20,0,0,1-20,20H48a20,20,0,0,1-20-20V48A20,20,0,0,1,48,28h67.43a12,12,0,0,1,0,24H52V204H204V140.57a12,12,0,0,1,24,0Z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="var(--font-color)"
+                  viewBox="0 0 256 256"
+                  class="delete"
+                >
+                  <path
+                    d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128Z"
+                  ></path>
+                </svg>
               </div>
             </div>
             <div class="todo-wrapper">
-              <input type="checkbox">
-              <input type="text" value="Teste2" disabled>
+              <input type="checkbox" />
+              <input type="text" value="Teste2" disabled />
               <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--todo-font-color)" viewBox="0 0 256 256" class="edit"><path d="M232.49,55.51l-32-32a12,12,0,0,0-17,0l-96,96A12,12,0,0,0,84,128v32a12,12,0,0,0,12,12h32a12,12,0,0,0,8.49-3.51l96-96A12,12,0,0,0,232.49,55.51ZM192,49l15,15L196,75,181,60Zm-69,99H108V133l56-56,15,15Zm105-7.43V208a20,20,0,0,1-20,20H48a20,20,0,0,1-20-20V48A20,20,0,0,1,48,28h67.43a12,12,0,0,1,0,24H52V204H204V140.57a12,12,0,0,1,24,0Z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--todo-font-color)" viewBox="0 0 256 256" class="delete"><path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128Z"></path></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="var(--font-color)"
+                  viewBox="0 0 256 256"
+                  class="edit"
+                >
+                  <path
+                    d="M232.49,55.51l-32-32a12,12,0,0,0-17,0l-96,96A12,12,0,0,0,84,128v32a12,12,0,0,0,12,12h32a12,12,0,0,0,8.49-3.51l96-96A12,12,0,0,0,232.49,55.51ZM192,49l15,15L196,75,181,60Zm-69,99H108V133l56-56,15,15Zm105-7.43V208a20,20,0,0,1-20,20H48a20,20,0,0,1-20-20V48A20,20,0,0,1,48,28h67.43a12,12,0,0,1,0,24H52V204H204V140.57a12,12,0,0,1,24,0Z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="var(--font-color)"
+                  viewBox="0 0 256 256"
+                  class="delete"
+                >
+                  <path
+                    d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128Z"
+                  ></path>
+                </svg>
               </div>
             </div>
             <div class="todo-wrapper">
-              <input type="checkbox">
-              <input type="text" value="Teste3" disabled>
+              <input type="checkbox" />
+              <input type="text" value="Teste3" disabled />
               <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--todo-font-color)" viewBox="0 0 256 256" class="edit"><path d="M232.49,55.51l-32-32a12,12,0,0,0-17,0l-96,96A12,12,0,0,0,84,128v32a12,12,0,0,0,12,12h32a12,12,0,0,0,8.49-3.51l96-96A12,12,0,0,0,232.49,55.51ZM192,49l15,15L196,75,181,60Zm-69,99H108V133l56-56,15,15Zm105-7.43V208a20,20,0,0,1-20,20H48a20,20,0,0,1-20-20V48A20,20,0,0,1,48,28h67.43a12,12,0,0,1,0,24H52V204H204V140.57a12,12,0,0,1,24,0Z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--todo-font-color)" viewBox="0 0 256 256" class="delete"><path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128Z"></path></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="var(--font-color)"
+                  viewBox="0 0 256 256"
+                  class="edit"
+                >
+                  <path
+                    d="M232.49,55.51l-32-32a12,12,0,0,0-17,0l-96,96A12,12,0,0,0,84,128v32a12,12,0,0,0,12,12h32a12,12,0,0,0,8.49-3.51l96-96A12,12,0,0,0,232.49,55.51ZM192,49l15,15L196,75,181,60Zm-69,99H108V133l56-56,15,15Zm105-7.43V208a20,20,0,0,1-20,20H48a20,20,0,0,1-20-20V48A20,20,0,0,1,48,28h67.43a12,12,0,0,1,0,24H52V204H204V140.57a12,12,0,0,1,24,0Z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="var(--font-color)"
+                  viewBox="0 0 256 256"
+                  class="delete"
+                >
+                  <path
+                    d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128Z"
+                  ></path>
+                </svg>
               </div>
             </div>
             <div class="todo-wrapper">
-              <input type="checkbox">
-              <input type="text" value="Teste4" disabled>
+              <input type="checkbox" />
+              <input type="text" value="Teste4" disabled />
               <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--todo-font-color)" viewBox="0 0 256 256" class="edit"><path d="M232.49,55.51l-32-32a12,12,0,0,0-17,0l-96,96A12,12,0,0,0,84,128v32a12,12,0,0,0,12,12h32a12,12,0,0,0,8.49-3.51l96-96A12,12,0,0,0,232.49,55.51ZM192,49l15,15L196,75,181,60Zm-69,99H108V133l56-56,15,15Zm105-7.43V208a20,20,0,0,1-20,20H48a20,20,0,0,1-20-20V48A20,20,0,0,1,48,28h67.43a12,12,0,0,1,0,24H52V204H204V140.57a12,12,0,0,1,24,0Z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--todo-font-color)" viewBox="0 0 256 256" class="delete"><path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128Z"></path></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="var(--font-color)"
+                  viewBox="0 0 256 256"
+                  class="edit"
+                >
+                  <path
+                    d="M232.49,55.51l-32-32a12,12,0,0,0-17,0l-96,96A12,12,0,0,0,84,128v32a12,12,0,0,0,12,12h32a12,12,0,0,0,8.49-3.51l96-96A12,12,0,0,0,232.49,55.51ZM192,49l15,15L196,75,181,60Zm-69,99H108V133l56-56,15,15Zm105-7.43V208a20,20,0,0,1-20,20H48a20,20,0,0,1-20-20V48A20,20,0,0,1,48,28h67.43a12,12,0,0,1,0,24H52V204H204V140.57a12,12,0,0,1,24,0Z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="var(--font-color)"
+                  viewBox="0 0 256 256"
+                  class="delete"
+                >
+                  <path
+                    d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128Z"
+                  ></path>
+                </svg>
               </div>
             </div>
             <div class="todo-wrapper">
-              <input type="checkbox">
-              <input type="text" value="Teste5" disabled>
+              <input type="checkbox" />
+              <input type="text" value="Teste5" disabled />
               <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--todo-font-color)" viewBox="0 0 256 256" class="edit"><path d="M232.49,55.51l-32-32a12,12,0,0,0-17,0l-96,96A12,12,0,0,0,84,128v32a12,12,0,0,0,12,12h32a12,12,0,0,0,8.49-3.51l96-96A12,12,0,0,0,232.49,55.51ZM192,49l15,15L196,75,181,60Zm-69,99H108V133l56-56,15,15Zm105-7.43V208a20,20,0,0,1-20,20H48a20,20,0,0,1-20-20V48A20,20,0,0,1,48,28h67.43a12,12,0,0,1,0,24H52V204H204V140.57a12,12,0,0,1,24,0Z"></path></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--todo-font-color)" viewBox="0 0 256 256" class="delete"><path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128Z"></path></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="var(--font-color)"
+                  viewBox="0 0 256 256"
+                  class="edit"
+                >
+                  <path
+                    d="M232.49,55.51l-32-32a12,12,0,0,0-17,0l-96,96A12,12,0,0,0,84,128v32a12,12,0,0,0,12,12h32a12,12,0,0,0,8.49-3.51l96-96A12,12,0,0,0,232.49,55.51ZM192,49l15,15L196,75,181,60Zm-69,99H108V133l56-56,15,15Zm105-7.43V208a20,20,0,0,1-20,20H48a20,20,0,0,1-20-20V48A20,20,0,0,1,48,28h67.43a12,12,0,0,1,0,24H52V204H204V140.57a12,12,0,0,1,24,0Z"
+                  ></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="var(--font-color)"
+                  viewBox="0 0 256 256"
+                  class="delete"
+                >
+                  <path
+                    d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128Z"
+                  ></path>
+                </svg>
               </div>
             </div>
-            
           </div>
           <div class="features">
             <span id="todosRemaining">5 itens left</span>
             <div>
-              <strong class="interactable" id="showAll">All</strong>
-              <strong class="interactable" id="showActive">Active</strong>
-              <strong class="interactable" id="showCompleted">Completed</strong>
+              <strong class="interactable showAll">All</strong>
+              <strong class="interactable showActive">Active</strong>
+              <strong class="interactable showCompleted">Completed</strong>
             </div>
-            <span class="interactable" id="clearCompleted">Clear Completed</span>
+            <span class="interactable" id="clearCompleted"
+              >Clear Completed</span
+            >
           </div>
+        </div>
+        <div class="features-mobile">
+          <strong class="interactable showAll">All</strong>
+          <strong class="interactable showActive">Active</strong>
+          <strong class="interactable showCompleted">Completed</strong>
         </div>
       </main>
     </div>
     <footer>
       <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Davi Ferreira</a>.
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Davi Ferreira</a>.
       </div>
     </footer>
   </body>
