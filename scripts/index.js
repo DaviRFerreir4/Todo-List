@@ -110,12 +110,12 @@ function checkTodos() {
   let completed = 0;
   todos.forEach((element, index) => {
     let teste = document.querySelectorAll("input[type=checkbox]")[index];
-    teste.addEventListener("change", checkTodos)
+    //teste.addEventListener("change", checkTodos)
     if (teste.checked) {
       completed++;
     }
   });
-  document.querySelector("span#todosRemaining").textContent = `${todos.length - 1 - completed} itens left`
+  document.querySelector("span#todosRemaining").textContent = `${todos.length - 1 - completed}/${todos.length - 1} itens left`
 }
 
 let todos = document.querySelectorAll(".todo-wrapper");
@@ -182,4 +182,7 @@ document.querySelector("span#clearCompleted").addEventListener("click", () => {
   todosDel.forEach(element => {
     element.remove();
   });
+checkTodos();
 });
+
+checkTodos();
