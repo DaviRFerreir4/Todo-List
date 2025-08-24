@@ -1,3 +1,11 @@
+.drag-and-drop {
+  font-size: 0.875rem;
+  letter-spacing: -0.04em;
+  justify-content: center;
+  margin-bottom: 2rem;
+  display: none;
+}
+
 .attribution {
   width: fit-content;
   margin-inline: auto;
@@ -7,5 +15,11 @@
 
   a {
     color: var(--link);
+  }
+}
+
+@media (width >= 46.5em) {
+  .drag-and-drop {
+    display: flex;
   }
 }

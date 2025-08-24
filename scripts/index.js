@@ -1,6 +1,5 @@
 // Métodos de alteração de modo (light ou dark)
-
-const html = document.getElementsByTagName("html")[0]
+const html = document.querySelector("html")
 const bgImg = document.querySelector(".bg-image")
 const changeModeImg = document.querySelector("#changeMode")
 
@@ -71,8 +70,10 @@ function editElement(inputCheckbox, inputText) {
 }
 
 function deleteElement(element) {
-  element.remove()
-  checkTodos()
+  if (window.confirm("Deseja realmente deletar o Todo?")) {
+    element.remove()
+    checkTodos()
+  }
 }
 
 // Método para criação de todos
