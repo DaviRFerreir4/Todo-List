@@ -70,7 +70,7 @@ function editElement(inputCheckbox, inputText) {
 }
 
 function deleteElement(element) {
-  if (window.confirm("Deseja realmente deletar o Todo?")) {
+  if (window.confirm("Do you realy want to delete this todo?")) {
     element.remove()
     checkTodos()
   }
@@ -80,6 +80,9 @@ function deleteElement(element) {
 
 const addTodo = document.querySelector("svg.add")
 addTodo.addEventListener("click", () => {
+  if (document.querySelector("input[type=text]").value.trim() === "") {
+    return alert("Insert the todo text before creating it")
+  }
   const newTodo = document.createElement("div")
   newTodo.classList.add("todo-wrapper")
   const inputCheckbox = document.createElement("input")
@@ -87,7 +90,7 @@ addTodo.addEventListener("click", () => {
   inputCheckbox.addEventListener("change", checkTodos)
   const inputText = document.createElement("input")
   inputText.type = "text"
-  inputText.value = document.querySelector("input[type=text]").value
+  inputText.value = document.querySelector("input[type=text]").value.trim()
   inputText.disabled = true
   const svgEdit = createSvgEdit()
   svgEdit.addEventListener("click", () => {
