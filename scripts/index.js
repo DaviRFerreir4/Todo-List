@@ -62,6 +62,9 @@ function editElement(inputCheckbox, inputText) {
     inputCheckbox.disabled = true
     inputCheckbox.style.backgroundColor = "var(--todo-border-color)"
   } else {
+    if (inputText.value.trim() === "") {
+      return alert("You can't leave the todo empty")
+    }
     inputText.disabled = true
     inputText.style.borderColor = "transparent"
     inputCheckbox.disabled = false

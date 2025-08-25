@@ -97,6 +97,11 @@
   border: none;
 }
 
+.dragging {
+  opacity: 0.5;
+  filter: invert(5%);
+}
+
 @media (width > 46.5em) {
   .new-todo {
     margin-block: 3.25rem 1.5rem;
