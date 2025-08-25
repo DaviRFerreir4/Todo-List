@@ -9,14 +9,18 @@ todos.forEach((element, key) => {
       element.classList.remove("dragging")
     })
     element.addEventListener("dragover", (ev) => {
-      ev.preventDefault()
-      const targetElement = ev.target.closest(".todo-wrapper")
-      const arrowElement = document.querySelector(".dragging")
-      if (targetElement.compareDocumentPosition(arrowElement) == 2) {
-        targetElement.after(arrowElement)
-      } else if (targetElement.compareDocumentPosition(arrowElement) == 4) {
-        targetElement.before(arrowElement)
-      }
+      dragAndDropTodo(ev)
     })
   }
 })
+
+export function dragAndDropTodo(ev) {
+  ev.preventDefault()
+  const targetElement = ev.target.closest(".todo-wrapper")
+  const arrowElement = document.querySelector(".dragging")
+  if (targetElement.compareDocumentPosition(arrowElement) == 2) {
+    targetElement.after(arrowElement)
+  } else if (targetElement.compareDocumentPosition(arrowElement) == 4) {
+    targetElement.before(arrowElement)
+  }
+}
